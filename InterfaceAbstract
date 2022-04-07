@@ -1,0 +1,65 @@
+//Interface Classes
+package week3.day1.Interface;
+
+public interface Language {
+	
+	void java();
+
+}
+
+package week3.day1.Interface;
+
+public interface TestTool 
+{
+	
+		void selenium();
+
+}
+
+
+//Abstract Class
+package week3.day1.Interface;
+
+public abstract class MultipleLanguage implements TestTool,Language
+{
+	
+	void python()
+	{
+		System.out.println("This programming langauge is PYTHONRUBY from MultipleLanguage class");
+	}
+	abstract void ruby();
+
+}
+
+
+//Main class
+package week3.day1.Interface;
+
+public class Automation  extends MultipleLanguage {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Automation automation = new Automation();
+		automation.python();
+		automation.ruby();
+		automation.selenium();
+		automation.java();
+	}
+
+	@Override
+	void ruby() {
+		// TODO Auto-generated method stub
+		System.out.println("This Programming language is RUBY from MultipleLanguage class");
+	}
+
+	public void selenium() {
+		// TODO Auto-generated method stub
+		System.out.println("This Programming language is Selenium for TestTool class");
+	}
+
+	public void java() {
+		// TODO Auto-generated method stub
+		System.out.println("This Programming language is Java from Language");
+	}
+
+}
