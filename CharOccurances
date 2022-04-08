@@ -1,0 +1,23 @@
+package week3Assignment;
+
+import org.bouncycastle.util.Arrays;
+
+public class CharOccurances {
+
+	public static void main(String[] args) {
+		String str ="Welcome to chennai";
+		int count=0;
+		char[] strArr = str.toCharArray();
+		int strCount = strArr.length;
+		System.out.println(strCount);
+		for (char c : strArr)
+		{
+			if(c=='e')
+			{
+				count = count+1;
+			}
+		}
+		System.out.println(count);
+	}
+
+}
