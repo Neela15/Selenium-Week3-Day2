@@ -1,0 +1,40 @@
+package week3Assignment;
+
+import java.util.Arrays;
+
+public class Anagram {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String value1 ="stops";
+		String value2 ="potss";
+		if(value1.length()==value2.length())
+		{
+			char[] Value1 = value1.toCharArray();
+				for(char c : Value1)
+			{
+				System.out.print(c);
+			}
+			char[] Value2 = value2.toCharArray();
+			for(char c1 : Value2)
+			{
+				System.out.print(c1);
+			}
+			Arrays.sort(Value1);
+			Arrays.sort(Value2);
+			boolean result = Arrays.equals(Value1, Value2);
+			if(result == true)
+			{
+				System.out.println("The string is an Anagram");
+			}
+			else
+			{
+				System.out.println("The String is not an Anagram");
+			}
+		}
+		else
+		{
+			System.out.println("The String is not an Anagram");
+		}
+	}
+}
