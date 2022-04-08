@@ -1,0 +1,26 @@
+package week3Assignment;
+
+public class Palindrome {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String value ="Madam";
+		String rValue =" ";
+		int size = value.length();
+		for (int i=(size-1);i>=0;i--)
+		{
+			rValue = rValue+value.charAt(i);
+		}
+		System.out.println("Reversed Value =" +rValue.toLowerCase());
+		//if(value.equalsIgnoreCase(rValue))
+		if(value.toLowerCase().equals(rValue.toLowerCase()))
+		{
+			System.out.println("The" +value + "is a Palindrome");
+		}
+		else 
+		{
+			System.out.println("The" +value + "is not a Palindrome");
+		}
+	}
+
+}
