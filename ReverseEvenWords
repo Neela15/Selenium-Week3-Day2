@@ -1,0 +1,33 @@
+package week3Assignment;
+
+public class ReverseEvenWords {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String test = "I am a software tester"; 
+		String[] spilted = test.split(" "); // test String converted to Array splited
+		for (String S : spilted)  // verifying the array 
+		{
+			System.out.println(S);
+		}
+			int size = spilted.length; // Size of array
+			
+			for(int i=0; i<=size-1; i++) // loop to transvere through the array
+			{
+				if(i%2 == 0) // mod for getting old index
+				{
+					System.out.print(spilted[i]+" ");
+				}
+			    else // mod for getting even index
+				{
+					int size1= spilted[i].length();
+					for (int j=size1-1;j>=0;j--)
+					{
+						System.out.print(spilted[i].charAt(j));
+					}
+				}
+				
+			}
+	}
+
+}
